@@ -1,9 +1,14 @@
-import React from 'react'
+import { Button } from "@/components/ui/button";
+import React from "react";
 
 const Page = () => {
   return (
-    <div>HomePage</div>
-  )
-}
+    <div>
+      {" "}
+      <h1 className="text-2xl underline">welcome to sass</h1>{" "}
+      <Button>lets get started</Button>
+    </div>
+  );
+};
 
-export default Page
+export default Page;
