@@ -1,7 +1,7 @@
 import React from "react";
 
 const CompanionsLibary = () => {
-  return <div></div>;
+  return <div>Companions</div>;
 };
 
 export default CompanionsLibary;
