@@ -23,13 +23,13 @@ const Page = () => {
           name="Countsy the Number Wizard"
           topic="Derivatives & Integrals"
           subject="Maths"
-          duration={30}
+          duration={50}
           color="#ffda6e"
         ></CompanionCard>
         <CompanionCard
-          id="123"
-          name="Neura the Brainy Explorer"
-          topic="Neural Network of the Brain"
+          id="789"
+          name="Verba the Vocabulary Builder"
+          topic="English Literature "
           subject="science"
           duration={45}
           color="#ffda6e"
