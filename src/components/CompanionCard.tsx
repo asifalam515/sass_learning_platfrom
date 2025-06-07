@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 interface CompanionCardProps {
   id: string;
@@ -41,6 +42,11 @@ const CompanionCard = ({
         ></Image>
         <p className="texsm">{duration} mins duration</p>
       </div>
+      <Link className="w-full" href={`/companions/${id}`}>
+        <button className="btn-primary w-full justify-center">
+          Launch Lesson
+        </button>
+      </Link>
     </article>
   );
 };

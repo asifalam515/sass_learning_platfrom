@@ -24,7 +24,7 @@ const Page = () => {
           topic="Derivatives & Integrals"
           subject="Maths"
           duration={50}
-          color="#ffda6e"
+          color="#a83299"
         ></CompanionCard>
         <CompanionCard
           id="789"
@@ -32,7 +32,7 @@ const Page = () => {
           topic="English Literature "
           subject="science"
           duration={45}
-          color="#ffda6e"
+          color="#32a89d"
         ></CompanionCard>
       </section>
       <section className="home-section">
