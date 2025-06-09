@@ -8,10 +8,14 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
+import Image from "next/image";
+import { subjects } from "@/constants";
 interface CompanionListProps {
   title: string;
-  companions: string;
-  classNames: string;
+  companions?: Companion[];
+  classNames?: string;
 }
 const CompanionList = ({
   title,
@@ -19,19 +23,37 @@ const CompanionList = ({
   classNames,
 }: CompanionListProps) => {
   return (
-    <article>
-      <h2>Recent sessions</h2>
+    <article className={cn("companion-list", classNames)}>
+      <h2 className="font-bold text-3xl ">Recent sessions</h2>
       <Table>
-        <TableCaption>A list of your recent invoices.</TableCaption>
         <TableHeader>
           <TableRow>
-            <TableHead className="w-[100px]">Invoice</TableHead>
-            <TableHead>Status</TableHead>
-            <TableHead>Method</TableHead>
-            <TableHead className="text-right">Amount</TableHead>
+            <TableHead className="text-lg w-2/3">Lessons</TableHead>
+            <TableHead className="text-lg">Subject</TableHead>
+            <TableHead className="text-lg text-right">Duration</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
+          {companions?.map((companion) => (
+            <TableRow key={companion.id}>
+              <TableCell>
+                <Link href={`/companions/${companion.id}`}>
+                  <div className="flex items-center gap-2">
+                    <div>
+                      <Image
+                        src={`/icons/${companion.subject}.svg`}
+                        alt="image"
+                        width={35}
+                        height={35}
+                      ></Image>
+                    </div>
+                  </div>
+                  {companion.subject}
+                </Link>
+              </TableCell>
+            </TableRow>
+          ))}
+
           <TableRow>
             <TableCell className="font-medium">INV001</TableCell>
             <TableCell>Paid</TableCell>
