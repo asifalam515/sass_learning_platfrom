@@ -46,6 +46,12 @@ const CompanionList = ({
                         width={35}
                         height={35}
                       ></Image>
+                      <Image
+                        src={`/icons/${companion.subject}.svg`}
+                        alt="image"
+                        width={35}
+                        height={35}
+                      ></Image>
                     </div>
                   </div>
                   {companion.subject}
