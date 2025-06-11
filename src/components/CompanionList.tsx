@@ -39,13 +39,7 @@ const CompanionList = ({
               <TableCell>
                 <Link href={`/companions/${companion.id}`}>
                   <div className="flex items-center gap-2">
-                    <div>
-                      <Image
-                        src={`/icons/${companion.subject}.svg`}
-                        alt="image"
-                        width={35}
-                        height={35}
-                      ></Image>
+                    <div className="size-[72px] flex itmes-center justify-center rounded-lg max-md:hidden ">
                       <Image
                         src={`/icons/${companion.subject}.svg`}
                         alt="image"
