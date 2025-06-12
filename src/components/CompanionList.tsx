@@ -61,7 +61,14 @@ const CompanionList = ({
                 <div
                   className="flex items-center justify-center rounded-lg w-fit p-2 md:hidden"
                   style={{}}
-                ></div>
+                >
+                  <Image
+                    src={`icons/${companion.subject}.svg`}
+                    alt={companion.subject}
+                    width={18}
+                    height={18}
+                  ></Image>
+                </div>
               </TableCell>
             </TableRow>
           ))}
